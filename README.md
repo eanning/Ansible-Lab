@@ -217,3 +217,5 @@ uid=0(root) gid=0(root) groups=0(root) ...
 - **Checkpoints:** each VM is snapshotted in a clean state so disk/service labs are a one-click revert.
 - **Static IP range:** `192.168.0.10`–`.13` are kept outside the router's DHCP pool to avoid address conflicts.
 - **Credentials:** the lab password above is for an isolated practice environment only. Never commit real secrets, Ansible Vault password files are excluded via `.gitignore`.
+- - **Remote access:** [Tailscale](https://tailscale.com/) is installed on the control node, putting it on a private WireGuard-based mesh network. This lets me SSH into the lab and drive Ansible from anywhere without exposing any ports to the internet or configuring port forwarding on the router.
+
