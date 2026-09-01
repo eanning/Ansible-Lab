@@ -1,0 +1,14 @@
+---
+
+- name: Grant passwordless sudo to automation user
+  hosts: all
+  become: true
+  tasks:
+    - name: Create sudoers drop in file
+      ansible.builtin.copy:
+        content: "automation ALL=(ALL) NOPASSWD: ALL\n"
+        dest: /etc/sudoers.d/automation
+        owner: root
+        group: root
+        mode: '0440'
+        validate: 'visudo -cf %s'
