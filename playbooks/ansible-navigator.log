@@ -1,0 +1,12 @@
+2026-09-01T22:53:31.194324+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2026-09-01T22:53:31.194580+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2026-09-01T22:53:31.194632+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: registry.redhat.io/ansible-automation-platform-25/ee-supported-rhel8:latest: image not known
+
+2026-09-01T22:53:31.966313+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2026-09-05T18:48:01.657981+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2026-09-05T18:48:01.658158+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2026-09-05T18:48:01.658184+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: registry.redhat.io/ansible-automation-platform-25/ee-supported-rhel8:latest: image not known
+
+2026-09-05T18:48:19.552024+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed

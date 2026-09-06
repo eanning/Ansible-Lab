@@ -1,0 +1,17 @@
+---
+- name: Configure web servers          # play name
+  hosts: webservers                    # target group from inventory
+  become: true                         # privilege escalation for this play
+  vars:
+    http_port: 80
+  tasks:
+    - name: Install httpd
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+
+    - name: Start and enable httpd
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true

@@ -1,0 +1,15 @@
+---
+
+ansible-navigator:
+  ansible:
+    inventory:
+      entries:
+        - /home/automation/ex294/inventory
+  execution-environment:  
+    image: quay.io/ansible/creator-ee:latest  #which container image to run playbook inside 
+    pull: 
+      policy: missing # always, missing, never, tag (use missing or never in an offline exam)
+  playbook-artifact:
+    enable: false
+  mode: stdout  # (behaves like classic ansible-playbook output = faster and less error-prone under time pressure) vs interactive (TUI browser)
+  
