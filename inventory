@@ -1,3 +1,6 @@
+#Ansible inventory file (INI format)
+
+# Host groups [dev], [test], [prod]
 [dev]
 node1.lab.example.com
 
@@ -7,10 +10,16 @@ node2.lab.example.com
 [prod]
 node3.lab.example.com
 
-[webservers:children]
+[webservers:children] # means: "the group webservers contains all the hosts that are in the group prod."
 prod
 
 [all:vars]
-ansible_python_interpreter=/usr/bin/python3
+ansible_python_interpreter=/usr/bin/python3 # tells Ansible which Python binary to use on the managed nodes when running modules
 
 #ansible all --list-hosts -i inventory
+#ansible --list-hosts all -i inventory
+
+#The key distinction:
+# [prod] → lines below are hosts
+# [prod:children] → lines below are groups
+# [prod:vars] → lines below are variables for that group
