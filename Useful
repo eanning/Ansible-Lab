@@ -1,0 +1,19 @@
+#ansible-doc - list all available modules
+#ansible-doc <modules> - full documentiation and examples for a modules (e.g ansible-doc user)
+
+#ansible-config init --disabled - generates a fully commented template config file with every setting listed and explained (run ansible-config init --disabled > ansible.cfg)
+#ansible-config lsit - shows all configuration settings and their defautls 
+
+#man ansible.cfg / man ansible
+
+Memorise:
+# [defaults]
+#inventory = /home/greg/ansible/inventory
+#remote_user = greg
+#roles_path = /home/greg/ansible/roles
+
+# [privilege_escalation]
+#become = True
+#become_method = sudo
+#become_user = root
+#become_ask_pass = False
